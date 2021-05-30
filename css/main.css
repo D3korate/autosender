@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
 body {
     font-family: "Roboto", sans-serif;
@@ -338,9 +339,11 @@ body {
 .screen-padding {
     padding-top: 120px;
     padding-bottom: 120px;
+    overflow: hidden;
 }
 
 .screen-title {
+    font-family: Montserrat;
     font-weight: bold;
     font-size: 38px;
     line-height: 130%;
@@ -525,7 +528,6 @@ body {
     text-align: center;
     top: -50px;
 }
-
 
 .screen-2__el__img > img {
     display: inline;
@@ -734,3 +736,333 @@ body {
     background: url(../img/arrow.svg) no-repeat 0 center;
 }
 
+.screen-4__el {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.045em;
+    color: #150202;
+    border: 1px solid #b5b5b5;
+    padding: 25px 30px 25px 123px;
+    height: 119px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.screen-4__el:after {
+    content: "";
+    position: absolute;
+    width: 195px;
+    right: -230px;
+    top: 50%;
+    border-bottom: 1px solid #b5b5b5;
+}
+
+.screen-4__el:before {
+    content: "";
+    position: absolute;
+    height: 59px;
+    left: 93px;
+    top: 50%;
+    margin-top: -30px;
+    border-left: 1px solid #b5b5b5;
+}
+
+.screen-4__el > span {
+    position: absolute;
+    left: 37px;
+    top: 50%;
+    margin-top: -16px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: right;
+    letter-spacing: 0.045em;
+    color: #150202;
+}
+
+.screen-5 {
+    background: url(../img/bg2.jpg) no-repeat 0 0;
+    background-size: cover;
+}
+
+.screen-5__title {
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 130%;
+    font-family: Montserrat;
+
+    letter-spacing: 0.045em;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.screen-5__dec {
+    font-size: 15px;
+    line-height: 150%;
+    margin-bottom: 46px;
+
+    letter-spacing: 0.04em;
+
+    color: #ffffff;
+}
+
+.screen-5__inputs {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.screen-5__input {
+    width: 268px;
+    height: 43px;
+    padding: 0 15px;
+
+    border: 1px solid #ffffff;
+
+    font-size: 15px;
+    margin-right: 77px;
+    letter-spacing: 0.04em;
+    background: none;
+    color: #ffffff;
+}
+
+.screen-5__input::placeholder {
+    color: #ffffff;
+}
+
+.screen-5__label {
+    max-width: 300px;
+    color: #fff;
+    display: block;
+    margin-bottom: 30px;
+    line-height: 150%;
+}
+
+.screen-5__label a {
+    color: #4971af;
+}
+
+.screen-5__submit {
+    width: 268px;
+    height: 42px;
+    background: #bc002d;
+    border: none;
+    font-size: 15px;
+
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    color: #ffffff;
+}
+
+.screen-6__el {
+    height: 100%;
+    background: #fff;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.2);
+}
+
+.screen-6__el__img {
+    width: 100%;
+}
+
+.screen-6__el__intro {
+    padding: 30px;
+}
+
+.screen-6__el__head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.screen-6__el__title {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0.045em;
+    color: #150202;
+}
+
+.screen-6__el__data {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.045em;
+    color: #150202;
+}
+
+.screen-6__el__city {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.045em;
+
+    color: #b5b5b5;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.screen-6__el__txt {
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    margin-bottom: 60px;
+    color: #150202;
+}
+
+.screen-6__el__open {
+    display: block;
+
+    width: 250px;
+    height: 47px;
+    background: #bc002d;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    line-height: 47px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.screen-6__el__more {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    position: relative;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.2);
+}
+
+.screen-6__el__more > span {
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    color: #000000;
+
+    opacity: 0.5;
+    transform: rotate(-90deg);
+    display: block;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    margin-left: -5px;
+}
+
+.screen-7 {
+    background: #343434;
+}
+
+.screen-7 .screen-title {
+    color: #fff;
+}
+
+.screen-7__img {
+    width: 100%;
+    display: block;
+}
+
+.screen-7__el {
+    position: relative;
+    color: #fff;
+    display: block;
+    cursor: pointer;
+}
+
+.screen-7__el:hover {
+    filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.3));
+}
+
+.screen-7__el__txt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 30px;
+    display: none;
+    color: #fff;
+}
+
+.screen-7__el:hover .screen-7__el__txt {
+    display: block;
+}
+
+.screen-7__el__title {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 130%;
+
+    letter-spacing: 0.045em;
+
+    margin-bottom: 20px;
+}
+
+.screen-7__el__dec {
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+
+    color: #ffffff;
+}
+
+.screen-7__more {
+    display: block;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    color: #b5b5b5;
+    width: 195px;
+    height: 44px;
+    line-height: 44px;
+    padding-left: 58px;
+    border: 1px solid #b5b5b5;
+    margin-top: 40px;
+    background: url(../img/arrow2.svg) no-repeat 34px center;
+}
+
+.screen-8__el {
+    border: 1px solid #b5b5b5;
+    padding: 30px;
+    min-height: 152px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.screen-8__el:after {
+    content: "";
+    position: absolute;
+    width: 195px;
+    right: -230px;
+    top: 50%;
+    border-bottom: 1px solid #b5b5b5;
+}
+
+.screen-8__el > span:nth-child(1) {
+    position: absolute;
+    right: -12px;
+    bottom: -32px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 110px;
+    line-height: 130%;
+    text-align: right;
+    letter-spacing: 0.045em;
+
+    color: rgba(0, 0, 0, 0.03);
+}
+
+.screen-8__el > span:nth-child(2) {
+    font-size: 15px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #150202;
+}

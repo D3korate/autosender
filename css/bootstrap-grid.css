@@ -72,6 +72,10 @@ html {
   margin-left: -15px;
 }
 
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
