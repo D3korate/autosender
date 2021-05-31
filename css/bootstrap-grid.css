@@ -76,6 +76,10 @@ html {
   flex-wrap: nowrap;
 }
 
+.padding-top-43 {
+  padding-top: 42px;
+}
+
 .no-gutters {
   margin-right: 0;
   margin-left: 0;

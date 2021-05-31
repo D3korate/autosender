@@ -1066,3 +1066,152 @@ body {
     letter-spacing: 0.04em;
     color: #150202;
 }
+
+.screen-9__row {
+    border-top: 1px solid #b5b5b5;
+}
+
+.screen-9__row:last-child {
+    border-bottom: 1px solid #b5b5b5;
+}
+
+a.screen-9__el {
+    display: flex;
+    height: 175px;
+    align-items: center;
+    justify-content: center;
+}
+
+.screen-9 .col-md-2 {
+    border-right: 1px solid #b5b5b5;
+}
+
+.screen-10__txt {
+    padding-top: 30px;
+    border-top: 1px solid #000;
+}
+
+.screen-10__txt > h1 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.045em;
+    margin-bottom: 15px;
+    color: #150202;
+}
+
+.screen-10__txt > p {
+    font-size: 15px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #150202;
+}
+
+.footer {
+    background: #1a1a1a;
+    padding-top: 120px;
+    padding-bottom: 30px;
+}
+
+.footer__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.045em;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.footer__list > li {
+    margin-bottom: 16px;
+}
+
+.footer__list > li:last-child {
+    margin-bottom: 0;
+}
+
+.footer__list > li  {
+    font-size: 14px;
+    letter-spacing: 0.045em;
+   line-height: 21px;
+    opacity: 0.7;
+}
+
+.footer__list > li > a {
+     color: #ffffff;
+}
+
+.footer__soc-list {
+    display: flex;
+}
+
+.footer__soc-list > li {
+    margin-right: 15px;
+   
+}
+
+.footer__soc-list > li:last-child {
+    margin-right: 0;
+}
+
+.footer__soc-list > li > a {
+    width: 36px;
+    height: 36px;
+    display: block;
+}
+
+.footer__soc-list > li:nth-child(1) > a {
+    background: url(../img/youtube2.svg) no-repeat 0 0;
+}
+
+.footer__soc-list > li:nth-child(2) > a {
+    background: url(../img/instagram2.svg) no-repeat 0 0;
+}
+
+.footer__soc-list > li:nth-child(3) > a {
+    background: url(../img/whatsapp2.svg) no-repeat 0 0;
+}
+
+
+.f-contact > li:nth-child(1) {
+    padding-left: 18px;
+    background: url(../img/phone2.svg) no-repeat 0 2px;
+}
+
+.f-contact > li:nth-child(2) {
+    padding-left: 18px;
+    color: #fff;
+    background: url(../img/maps.svg) no-repeat 0 2px;
+}
+
+.f-contact > li:nth-child(2) > a {
+    font-size: 10px;
+    line-height: 12px;
+    display: block;
+    letter-spacing: 0.03em;
+    margin-top: 5px;
+    color: #5A9CFF;
+}
+
+
+.footer__bot {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 60px;
+    margin-top: 120px;
+    padding-bottom: 120px;
+}
+
+.footer__cop {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 30px;
+    font-size: 14px;
+line-height: 150%;
+/* or 21px */
+
+text-align: center;
+letter-spacing: 0.04em;
+
+color: #FFFFFF;
+
+opacity: 0.3;
+}
