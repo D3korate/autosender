@@ -19,8 +19,6 @@ html {
   box-sizing: inherit;
 }
 
-
-
 .container {
   width: 100%;
   padding-right: 15px;
@@ -385,7 +383,6 @@ html {
 .justify-between {
   justify-content: space-between;
 }
-
 
 @media (min-width: 576px) {
   .col-sm {
@@ -1291,6 +1288,48 @@ html {
 .flex-column-reverse {
   -ms-flex-direction: column-reverse !important;
   flex-direction: column-reverse !important;
+}
+
+.border-right {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.flex {
+  display: flex;
+}
+
+.margin-bottom-60 {
+  margin-bottom: 60px;
+}
+
+.margin-0 {
+  margin: 0 !important;
+}
+
+.margin-top-bottom-120 {
+  margin-bottom: 120px
+}
+
+.no-padding-top {
+  padding-top: 0 !important;
+}
+
+.padding-top-bottom-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.margin-bottom-40 {
+  margin-bottom: 40px;
+}
+
+.over-hidden {
+  overflow: hidden;
+}
+
+.position-static {
+  position: static !important;
 }
 
 .flex-wrap {
