@@ -1258,12 +1258,12 @@ a.screen-9__el {
     border-right: 1px solid #b5b5b5;
 }
 
-.screen-10__txt {
+.seo-text__txt {
     padding-top: 30px;
     border-top: 1px solid #000;
 }
 
-.screen-10__txt > h1 {
+.seo-text__txt > h1 {
     font-weight: bold;
     font-size: 18px;
     line-height: 130%;
@@ -1272,7 +1272,7 @@ a.screen-9__el {
     color: #150202;
 }
 
-.screen-10__txt > p {
+.seo-text__txt > p {
     font-size: 15px;
     line-height: 150%;
     letter-spacing: 0.04em;
@@ -3175,10 +3175,16 @@ ul.articles-page__cont__list > li > ul > li:last-child {
     color: #150202;
     opacity: 0.5;
     position: relative;
+    margin-bottom: 120px;
     counter-reset: li;
 }
 
 .calculator-page__ol > li:before {
     content: counter(li) ".";
     counter-increment: li;
+}
+
+
+.calculator-page__seo {
+    margin-top: 120px;
 }
