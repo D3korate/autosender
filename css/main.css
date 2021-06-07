@@ -3436,6 +3436,15 @@ ul.articles-page__cont__list > li > ul > li:last-child {
     .brand__list > li:nth-child(8) {
         border-right: none;
     }
+
+    .brand__list > li > a {
+    
+        height: 135px;
+    }
+    .brand {
+  
+        border-bottom: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -3455,9 +3464,7 @@ ul.articles-page__cont__list > li > ul > li:last-child {
     .screen-1__title {
         font-size: 36px;
     }
-    .screen-1 {
-        height: 800px;
-    }
+
     .screen-1__form-first {
         max-width: 280px;
     }
