@@ -56,6 +56,12 @@ autoEl.forEach(function (el, i) {
 const tabs = document.querySelectorAll(".tabs");
 
 for (let y = 0; y < tabs.length; y++) {
+
+
+
+
+
+
   const tabList = tabs[y].querySelectorAll(".tabs-list > li");
   const tabItem = tabs[y].querySelectorAll(".tabs-item");
 
@@ -80,7 +86,27 @@ for (let y = 0; y < tabs.length; y++) {
 
   })
 
+
+
+
   tabList[0].click()
+
+  const toggelMobile = tabs[y].querySelector(".toggel-mobile");
+  const tabsListUl = tabs[y].querySelector(".tabs-list");
+
+  toggelMobile.addEventListener("click", function () {
+    tabsListUl.classList.toggle("active");
+    this.classList.toggle("active");
+  });
+
+  tabList.forEach(function(item) {
+    item.addEventListener("click", function() {
+      if(tabsListUl.classList.contains("active")) tabsListUl.classList.remove("active");
+      toggelMobile.innerHTML = item.textContent;
+       });
+   
+  })
+
 
 }
 
@@ -145,37 +171,37 @@ function slider() {
 
 
 function sliderStep() {
-let mainSlider = document.querySelectorAll(".main-slider");
-if (!mainSlider) return false;
+  let mainSlider = document.querySelectorAll(".main-slider");
+  if (!mainSlider) return false;
 
-mainSlider.forEach(function(i) {
+  mainSlider.forEach(function (i) {
 
-let sliderStep = i.querySelector(".sliderStep");
-let sliderStepItem = i.querySelectorAll(".sliderStep__item");
-let sliderLeft = i.querySelector(".slider-left");
-let sliderRight = i.querySelector(".slider-right");
-let offeset = 0;
-let sliderStepNumbOnPage = sliderStep.clientWidth / sliderStepItem[0].clientWidth;
-sliderStepNumbOnPage = Math.round(sliderStepNumbOnPage);
-let slideWidth = sliderStepItem[0].clientWidth;
+    let sliderStep = i.querySelector(".sliderStep");
+    let sliderStepItem = i.querySelectorAll(".sliderStep__item");
+    let sliderLeft = i.querySelector(".slider-left");
+    let sliderRight = i.querySelector(".slider-right");
+    let offeset = 0;
+    let sliderStepNumbOnPage = sliderStep.clientWidth / sliderStepItem[0].clientWidth;
+    sliderStepNumbOnPage = Math.round(sliderStepNumbOnPage);
+    let slideWidth = sliderStepItem[0].clientWidth;
 
-sliderRight.addEventListener("click", function () {
+    sliderRight.addEventListener("click", function () {
 
-  offeset += slideWidth;
-  if (offeset > slideWidth * (sliderStepItem.length - sliderStepNumbOnPage)) offeset = 0;
-  sliderStep.style.left = - offeset + "px";
+      offeset += slideWidth;
+      if (offeset > slideWidth * (sliderStepItem.length - sliderStepNumbOnPage)) offeset = 0;
+      sliderStep.style.left = - offeset + "px";
 
-})
+    })
 
-sliderLeft.addEventListener("click", function () {
+    sliderLeft.addEventListener("click", function () {
 
-  offeset -= slideWidth;
-  if (offeset < 0) offeset = 0;
-  sliderStep.style.left = - offeset + "px";
+      offeset -= slideWidth;
+      if (offeset < 0) offeset = 0;
+      sliderStep.style.left = - offeset + "px";
 
-})
+    })
 
-});
+  });
 
 
 
@@ -189,10 +215,10 @@ sliderLeft.addEventListener("click", function () {
 let spolerItem = document.querySelectorAll(".information-page__spoler");
 
 
-spolerItem.forEach(function(el) {
+spolerItem.forEach(function (el) {
 
-  el.addEventListener("click", function() {
-    
+  el.addEventListener("click", function () {
+
     el.classList.toggle("active");
   })
 })
@@ -202,11 +228,14 @@ const imgContainerFluid = document.querySelectorAll(".information-page__img-flui
 
 
 
-imgContainerFluid.forEach(function(el) {
+imgContainerFluid.forEach(function (el) {
   let elHeight = el.clientHeight;
   el.parentElement.style.height = elHeight + "px";
-  
+
 })
+
+
+
 
 
 slider();
