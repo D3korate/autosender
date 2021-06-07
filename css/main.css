@@ -5,7 +5,6 @@ body {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     min-width: 1400px;
-    
 }
 
 * {
@@ -2702,12 +2701,84 @@ a.contact__page__teleg {
     max-width: 539px;
 }
 
-
 .product-page .additional-text__el {
-margin-top: 44px;
+    margin-top: 44px;
 }
-
 
 .review__youtube {
     margin-top: 120px;
+}
+
+.review__youtube__title {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #150202;
+    max-width: 310px;
+}
+
+.review__youtube__title > span {
+    color: #bc002d;
+}
+
+.review__youtube__go {
+    font-size: 15px;
+    line-height: 18px;
+    padding-left: 24px;
+    letter-spacing: 0.04em;
+    display: block;
+    color: #bc002d;
+    cursor: pointer;
+    margin-top: 40px;
+    background: url(../img/arrow6.svg) no-repeat 0 center;
+}
+
+.review__youtube__preview::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -30px;
+    margin-top: -30px;
+    background: url(../img/youtube5.svg) no-repeat center 0;
+    width: 60px;
+    height: 60px;
+}
+
+.articles-page__item {
+    padding-bottom: 20px;
+  border-bottom: 1px solid #150202;
+    height: 100%;
+}
+
+.articles-page__item-col {
+      
+       margin-bottom: 40px;
+}
+
+.articles-page__item__title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0.045em;
+    margin-bottom: 10px;
+    color: #150202;
+    margin-top: 20px;
+    display: block;
+}
+
+.articles-page__item__txt {
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #150202;
+    display: block;
+}
+
+.articles-page__item__img {
+    width: 100%;
 }
