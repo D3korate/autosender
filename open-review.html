@@ -13,49 +13,57 @@
 </head>
 
 <body>
+
     <header class="header">
         <div class="container-fluid">
-            <div class="display-flex align-item-center justify-between">
-                <div class="col-">
+            <div class="header__row display-flex align-item-center justify-between">
+                <div class="header__col">
                     <img src="img/logo.svg" alt="" class="header__logo">
                 </div>
-                <div class="col-">
+                <div class="header__col menu">
                     <ul class="header__menu">
                         <li class="active">
-                            <a href="">Цены на автомобили</a>
+                            <a href="#">Цены на автомобили</a>
                         </li>
                         <li>
-                            <a href="">Автоаукцион Онлайн</a>
+                            <a href="#">Автоаукцион Онлайн</a>
                         </li>
                         <li>
-                            <a href="">Информация</a>
+                            <a href="#">Информация</a>
                         </li>
                         <li>
-                            <a href="">О компании</a>
+                            <a href="#">О компании</a>
                         </li>
                         <li>
-                            <a href="">Отзывы</a>
+                            <a href="#">Отзывы</a>
                         </li>
                         <li>
-                            <a href="">Контакты</a>
+                            <a href="#">Контакты</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-">
-                    <ul class="header__soc">
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                    </ul>
-                </div>
-                <div class="col- header__phone">
-                    <a href="#">8 (800) 301-77-59</a>
-                    <span>Горячая линия, звонок<br> по РФ бесплатный</span>
+                <div class="header__rt">
+                    <div class="header__col">
+                        <ul class="header__soc">
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </div>
+                    <div class="header__col  header__phone">
+                        <a href="#">8 (800) 301-77-59</a>
+                        <span>Горячая линия, звонок<br> по РФ бесплатный</span>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="header__mobile">
+            <span class="header__mobile__menu-burg"></span>
+            <span class="header__mobile__menu-bid">Оставить заявку</span>
+            <span class="header__mobile__menu-whats"></span>
+            <span class="header__mobile__menu-chat"></span>
+        </div>
     </header>
-
     <main class="main review-open">
         <div class="container-fluid">
             <div class="row">
@@ -68,7 +76,7 @@
                     <h1 class="main__title">Елена, г. Артём о покупке автомобиля Toyota Vitz</h1>
 
                     <div class="row">
-                        <div class="col-7">
+                        <div class="col-lg-7 col-md-12 col-12">
                             <div class="fotorama" data-nav="thumbs" data-thumbheight="120" data-thumbwidth="250">
                                 <img src="img/rew-1.png" alt="">
                                 <img src="img/rew-1.png" alt="">
@@ -78,8 +86,8 @@
                                 <img src="img/rew-1.png" alt="">
                             </div>
                         </div>
-                        <div class="col-1"></div>
-                        <div class="col-4">
+                        <div class="col-md-1"></div>
+                        <div class="col-lg-4 col-md-12 col-12">
                             <div class="review-open__txt">
                                 Спасибо компании "Автосендер", за моего нового Витса!!! Было очень приятно работать с
                                 ребятами.
@@ -91,21 +99,18 @@
         </div>
     </main>
 
-
-
-
-    <section class="reviews screen-padding no-padding-top">
+    <section class="reviews screen-padding padding-top-0">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <div class="screen-title">Другие отзывы</div>
+                    <div class="screen-title">Отзывы</div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-9 over-hidden">
                     <div class="row flex-nowrap sliders">
-                        <div class="col-lg-4 col-md-6 col-sm-12 slide padding-top-bottom-20">
+                        <div class="col-lg-4 col-md-6 col-sm-12  col-12 slide padding-top-bottom-20">
                             <div class="reviews__el">
                                 <img src="img/rew.png" alt="" class="reviews__el__img">
                                 <div class="reviews__el__intro">
@@ -126,7 +131,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 col-sm-12 slide padding-top-bottom-20">
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 slide padding-top-bottom-20">
                             <div class="reviews__el">
                                 <img src="img/rew.png" alt="" class="reviews__el__img">
                                 <div class="reviews__el__intro">
@@ -147,7 +152,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 col-sm-12 slide padding-top-bottom-20">
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 slide padding-top-bottom-20">
                             <div class="reviews__el">
                                 <img src="img/rew.png" alt="" class="reviews__el__img">
                                 <div class="reviews__el__intro">
@@ -168,7 +173,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 col-sm-12 slide padding-top-bottom-20">
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 slide padding-top-bottom-20">
                             <div class="reviews__el">
                                 <img src="img/rew.png" alt="" class="reviews__el__img">
                                 <div class="reviews__el__intro">
@@ -190,7 +195,7 @@
                         </div>
 
 
-                        <div class="col-lg-4 col-md-6 col-sm-12 slide padding-top-bottom-20">
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 slide padding-top-bottom-20">
                             <div class="reviews__el">
                                 <img src="img/rew.png" alt="" class="reviews__el__img">
                                 <div class="reviews__el__intro">
@@ -211,7 +216,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 col-sm-12 slide padding-top-bottom-20">
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 slide padding-top-bottom-20">
                             <div class="reviews__el">
                                 <img src="img/rew.png" alt="" class="reviews__el__img">
                                 <div class="reviews__el__intro">
@@ -238,9 +243,7 @@
 
 
                 <div class="col-md-1 padding-top-bottom-20">
-                    <a href="" class="reviews__el__more">
-                        <span>Смотреть все</span>
-                    </a>
+                    <a href="" class="reviews__el__more"></a>
                 </div>
             </div>
             <div class="row">
@@ -249,8 +252,7 @@
                 </div>
             </div>
         </div>
-        </div>
-        </div>
+
     </section>
 
 
@@ -282,57 +284,66 @@
     <footer class="footer">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-2">
-                    <div class="footer__title">Autosender</div>
-                    <ul class="footer__list">
-                        <li><a href="#">Цены на автомобили</a></li>
-                        <li><a href="#">Автоаукцион Онлайн</a></li>
-                        <li><a href="#">Информация</a></li>
-                        <li><a href="#">О компании</a></li>
-                        <li><a href="#">Отзывы</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-6">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-12 mr-">
+                            <div class="footer__title">Autosender</div>
+                            <ul class="footer__list">
+                                <li><a href="#">Цены на автомобили</a></li>
+                                <li><a href="#">Автоаукцион Онлайн</a></li>
+                                <li><a href="#">Информация</a></li>
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">Отзывы</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-12 mr-">
+                            <div class="footer__title">Разделы</div>
+                            <ul class="footer__list">
+                                <li><a href="#">Статистика аукционов</a></li>
+                                <li><a href="#">Автоаукционы онлайн</a></li>
+                                <li><a href="#"> Доставка по России</a></li>
+                                <li><a href="#"> Калькулятор автомобиля</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-12 mr-">
+                            <div class="footer__title">Наши соц. сети</div>
+                            <ul class="footer__soc-list">
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-2">
-                    <div class="footer__title">Разделы</div>
-                    <ul class="footer__list">
-                        <li><a href="#">Статистика аукционов</a></li>
-                        <li><a href="#">Автоаукционы онлайн</a></li>
-                        <li><a href="#"> Доставка по России</a></li>
-                        <li><a href="#"> Калькулятор автомобиля</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2">
-                    <div class="footer__title">Наши соц. сети</div>
-                    <ul class="footer__soc-list">
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2">
-                    <div class="footer__title">Контакты</div>
-                    <ul class="footer__list f-contact">
-                        <li><a href="#">+7 (999) 559-85-80</a></li>
-                        <li><span>Екатеринбург, мкр. Светлый дом 2</span><a href="#">Как проехать?</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2 padding-top-43">
-                    <ul class="footer__list f-contact">
-                        <li><a href="#">+7 (999) 559-85-80</a></li>
-                        <li><span>Екатеринбург, мкр. Светлый дом 2</span><a href="#">Как проехать?</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2 padding-top-43">
-                    <ul class="footer__list f-contact">
-                        <li><a href="#">+7 (999) 559-85-80</a></li>
-                        <li><span>Екатеринбург, мкр. Светлый дом 2</span><a href="#">Как проехать?</a></li>
-                    </ul>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-6">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4  col-sm-4 col-md-4 col-12 footer-col__fr">
+                            <div class="footer__title">Контакты</div>
+                            <ul class="footer__list f-contact">
+                                <li><a href="#">+7 (999) 559-85-80</a></li>
+                                <li><span>Екатеринбург, мкр. Светлый дом 2</span><a href="#">Как проехать?</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-12 footer-col__br ">
+                            <ul class="footer__list f-contact">
+                                <li><a href="#">+7 (999) 559-85-80</a></li>
+                                <li><span>Екатеринбург, мкр. Светлый дом 2</span><a href="#">Как проехать?</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-12 footer-col__br">
+                            <ul class="footer__list f-contact">
+                                <li><a href="#">+7 (999) 559-85-80</a></li>
+                                <li><span>Екатеринбург, мкр. Светлый дом 2</span><a href="#">Как проехать?</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
+
             <div class="footer__bot">
                 <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-lg-2 col-md-4 col-4">
                         <ul class="footer__list">
                             <li><a href="#">Абакан</a></li>
                             <li><a href="#">Алапаевск</a></li>
@@ -353,7 +364,7 @@
                             <li><a href="#">Биробиджан</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-lg-2 col-md-4 col-4">
                         <ul class="footer__list">
                             <li><a href="#">Благовещенск</a></li>
                             <li><a href="#">Братск</a></li>
@@ -374,7 +385,7 @@
                             <li><a href="#">Казань</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-lg-2 col-md-4 col-4">
                         <ul class="footer__list">
                             <li><a href="#">Калуга</a></li>
                             <li><a href="#">Калуга</a></li>
@@ -396,7 +407,7 @@
                             <li><a href="#">Находка</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-lg-2 col-md-4 col-4">
                         <ul class="footer__list">
                             <li><a href="#">Находка</a></li>
                             <li><a href="#">Нерюнгри</a></li>
@@ -417,7 +428,7 @@
                             <li><a href="#">Пермь</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-lg-2 col-md-4 col-4">
                         <ul class="footer__list">
                             <li><a href="#">Петрозаводск</a></li>
                             <li><a href="#">Прокопьевск</a></li>
@@ -438,7 +449,7 @@
                             <li><a href="#">Тамбов</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-lg-2 col-md-4 col-4">
                         <ul class="footer__list">
                             <li><a href="#">Тверь</a></li>
                             <li><a href="#">Тольятти</a></li>
@@ -462,6 +473,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-md-12">
                     <div class="footer__cop">

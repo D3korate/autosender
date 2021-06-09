@@ -14,44 +14,52 @@
 <body>
     <header class="header">
         <div class="container-fluid">
-            <div class="display-flex align-item-center justify-between">
-                <div class="col-">
+            <div class="header__row display-flex align-item-center justify-between">
+                <div class="header__col">
                     <img src="img/logo.svg" alt="" class="header__logo">
                 </div>
-                <div class="col-">
+                <div class="header__col menu">
                     <ul class="header__menu">
                         <li class="active">
-                            <a href="">Цены на автомобили</a>
+                            <a href="#">Цены на автомобили</a>
                         </li>
                         <li>
-                            <a href="">Автоаукцион Онлайн</a>
+                            <a href="#">Автоаукцион Онлайн</a>
                         </li>
                         <li>
-                            <a href="">Информация</a>
+                            <a href="#">Информация</a>
                         </li>
                         <li>
-                            <a href="">О компании</a>
+                            <a href="#">О компании</a>
                         </li>
                         <li>
-                            <a href="">Отзывы</a>
+                            <a href="#">Отзывы</a>
                         </li>
                         <li>
-                            <a href="">Контакты</a>
+                            <a href="#">Контакты</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-">
-                    <ul class="header__soc">
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                    </ul>
-                </div>
-                <div class="col- header__phone">
-                    <a href="#">8 (800) 301-77-59</a>
-                    <span>Горячая линия, звонок<br> по РФ бесплатный</span>
+                <div class="header__rt">
+                    <div class="header__col">
+                        <ul class="header__soc">
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </div>
+                    <div class="header__col  header__phone">
+                        <a href="#">8 (800) 301-77-59</a>
+                        <span>Горячая линия, звонок<br> по РФ бесплатный</span>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="header__mobile">
+            <span class="header__mobile__menu-burg"></span>
+            <span class="header__mobile__menu-bid">Оставить заявку</span>
+            <span class="header__mobile__menu-whats"></span>
+            <span class="header__mobile__menu-chat"></span>
         </div>
     </header>
 
@@ -77,29 +85,30 @@
     </main>
 
 
-
-
-
-    <section class="auto-tabs screen-padding gray">
+    <section class="auto-tabs screen-padding gray" id="anchor-1">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
                     <div class="screen-title ">Интересные автомобили</div>
                     <div class="tabs">
-                        <ul class="auto-tabs__list tabs-list">
-                            <li><span>Гибриды</span> </li>
-                            <li><span>Минивены</span></li>
-                            <li><span>Кейкары</span></li>
-                            <li><span>Седаны</span></li>
-                            <li><span>Кроссоверы</span></li>
-                            <li><span>Хэтчбеки</span></li>
-                            <li><span>Электрокары</span></li>
-                        </ul>
 
-                        <div class="auto-tabs__tab tabs-item">
-                            <div class="row">
+                        <div class="auto-tabs__menu tabs-menu">
+                            <span class="auto-tabs__toggel-mobile toggel-mobile">Гибриды</span>
+                            <ul class="auto-tabs__list tabs-list">
+                                <li class="active"><span>Гибриды</span> </li>
+                                <li><span>Минивены</span></li>
+                                <li><span>Кейкары</span></li>
+                                <li><span>Седаны</span></li>
+                                <li><span>Кроссоверы</span></li>
+                                <li><span>Хэтчбеки</span></li>
+                                <li><span>Электрокары</span></li>
+                            </ul>
+                        </div>
 
-                                <div class="col-4">
+                        <div class="auto-tabs__tab tabs-item active">
+                            <div class="row flex-nowrap">
+
+                                <div class="col-md-4 col-3">
 
                                     <div class="auto-tabs__el">
                                         <div class="auto-tabs__el__img"> <img src="img/auto1.png" alt=""></div>
@@ -128,7 +137,7 @@
                                                 </div>
                                             </div>
                                             <div class="auto-tabs__el__rt">
-                                                <a href="">Оставить заявку</a>
+                                                <a href="#" class="auto-tabs__el__order">Оставить заявку</a>
                                             </div>
                                         </div>
 
@@ -136,7 +145,7 @@
                                 </div>
 
 
-                                <div class="col-4">
+                                <div class="col-md-4 col-3">
                                     <div class="auto-tabs__el">
                                         <div class="auto-tabs__el__img"> <img src="img/auto2.png" alt=""></div>
                                         <div class="auto-tabs__el__start">
@@ -164,13 +173,13 @@
                                                 </div>
                                             </div>
                                             <div class="auto-tabs__el__rt">
-                                                <a href="">Оставить заявку</a>
+                                                <a href="#" class="auto-tabs__el__order">Оставить заявку</a>
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-md-4 col-3">
                                     <div class="auto-tabs__el">
                                         <div class="auto-tabs__el__img"> <img src="img/auto2.png" alt=""></div>
                                         <div class="auto-tabs__el__start">
@@ -198,7 +207,7 @@
                                                 </div>
                                             </div>
                                             <div class="auto-tabs__el__rt">
-                                                <a href="">Оставить заявку</a>
+                                                <a href="#" class="auto-tabs__el__order">Оставить заявку</a>
                                             </div>
                                         </div>
 
@@ -208,9 +217,9 @@
                             </div>
                         </div>
                         <div class="auto-tabs__tab tabs-item">
-                            <div class="row">
+                            <div class="row flex-nowrap">
 
-                                <div class="col-4">
+                                <div class="col-md-4 col-3">
 
                                     <div class="auto-tabs__el">
                                         <div class="auto-tabs__el__img"> <img src="img/auto1.png" alt=""></div>
@@ -239,7 +248,7 @@
                                                 </div>
                                             </div>
                                             <div class="auto-tabs__el__rt">
-                                                <a href="">Оставить заявку</a>
+                                                <a href="#" class="auto-tabs__el__order">Оставить заявку</a>
                                             </div>
                                         </div>
 
@@ -247,7 +256,7 @@
                                 </div>
 
 
-                                <div class="col-4">
+                                <div class="col-md-4 col-3">
                                     <div class="auto-tabs__el">
                                         <div class="auto-tabs__el__img"> <img src="img/auto2.png" alt=""></div>
                                         <div class="auto-tabs__el__start">
@@ -275,13 +284,13 @@
                                                 </div>
                                             </div>
                                             <div class="auto-tabs__el__rt">
-                                                <a href="">Оставить заявку</a>
+                                                <a href="#" class="auto-tabs__el__order">Оставить заявку</a>
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-md-4 col-3">
                                     <div class="auto-tabs__el">
                                         <div class="auto-tabs__el__img"> <img src="img/auto2.png" alt=""></div>
                                         <div class="auto-tabs__el__start">
@@ -309,7 +318,7 @@
                                                 </div>
                                             </div>
                                             <div class="auto-tabs__el__rt">
-                                                <a href="">Оставить заявку</a>
+                                                <a href="#" class="auto-tabs__el__order">Оставить заявку</a>
                                             </div>
                                         </div>
 
@@ -319,9 +328,9 @@
                             </div>
                         </div>
                         <div class="auto-tabs__tab tabs-item">
-                            <div class="row">
+                            <div class="row flex-nowrap">
 
-                                <div class="col-4">
+                                <div class="col-md-4 col-3">
 
                                     <div class="auto-tabs__el">
                                         <div class="auto-tabs__el__img"> <img src="img/auto1.png" alt=""></div>
@@ -350,7 +359,7 @@
                                                 </div>
                                             </div>
                                             <div class="auto-tabs__el__rt">
-                                                <a href="">Оставить заявку</a>
+                                                <a href="#" class="auto-tabs__el__order">Оставить заявку</a>
                                             </div>
                                         </div>
 
@@ -358,7 +367,7 @@
                                 </div>
 
 
-                                <div class="col-4">
+                                <div class="col-md-4 col-3">
                                     <div class="auto-tabs__el">
                                         <div class="auto-tabs__el__img"> <img src="img/auto2.png" alt=""></div>
                                         <div class="auto-tabs__el__start">
@@ -386,13 +395,13 @@
                                                 </div>
                                             </div>
                                             <div class="auto-tabs__el__rt">
-                                                <a href="">Оставить заявку</a>
+                                                <a href="#" class="auto-tabs__el__order">Оставить заявку</a>
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-md-4 col-3">
                                     <div class="auto-tabs__el">
                                         <div class="auto-tabs__el__img"> <img src="img/auto2.png" alt=""></div>
                                         <div class="auto-tabs__el__start">
@@ -420,7 +429,7 @@
                                                 </div>
                                             </div>
                                             <div class="auto-tabs__el__rt">
-                                                <a href="">Оставить заявку</a>
+                                                <a href="#" class="auto-tabs__el__order">Оставить заявку</a>
                                             </div>
                                         </div>
 
@@ -430,8 +439,8 @@
                             </div>
                         </div>
                         <div class="auto-tabs__tab tabs-item">
-                            <div class="row">
-                                <div class="col-4">
+                            <div class="row flex-nowrap">
+                                <div class="col-md-4 col-3">
                                     <div class="auto-tabs__el">
                                         <div class="auto-tabs__el__img"> <img src="img/auto1.png" alt=""></div>
                                         <div class="auto-tabs__el__start">
@@ -459,7 +468,7 @@
                                                 </div>
                                             </div>
                                             <div class="auto-tabs__el__rt">
-                                                <a href="">Оставить заявку</a>
+                                                <a href="#" class="auto-tabs__el__order">Оставить заявку</a>
                                             </div>
                                         </div>
 
@@ -467,7 +476,7 @@
                                 </div>
 
 
-                                <div class="col-4">
+                                <div class="col-md-4 col-3">
                                     <div class="auto-tabs__el">
                                         <div class="auto-tabs__el__img"> <img src="img/auto2.png" alt=""></div>
                                         <div class="auto-tabs__el__start">
@@ -495,13 +504,13 @@
                                                 </div>
                                             </div>
                                             <div class="auto-tabs__el__rt">
-                                                <a href="">Оставить заявку</a>
+                                                <a href="#" class="auto-tabs__el__order">Оставить заявку</a>
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-md-4 col-3">
                                     <div class="auto-tabs__el">
                                         <div class="auto-tabs__el__img"> <img src="img/auto2.png" alt=""></div>
                                         <div class="auto-tabs__el__start">
@@ -529,7 +538,7 @@
                                                 </div>
                                             </div>
                                             <div class="auto-tabs__el__rt">
-                                                <a href="">Оставить заявку</a>
+                                                <a href="#" class="auto-tabs__el__order">Оставить заявку</a>
                                             </div>
                                         </div>
 
@@ -539,9 +548,9 @@
                             </div>
                         </div>
                         <div class="auto-tabs__tab tabs-item">
-                            <div class="row">
+                            <div class="row flex-nowrap">
 
-                                <div class="col-4">
+                                <div class="col-md-4 col-3">
 
                                     <div class="auto-tabs__el">
                                         <div class="auto-tabs__el__img"> <img src="img/auto1.png" alt=""></div>
@@ -570,7 +579,7 @@
                                                 </div>
                                             </div>
                                             <div class="auto-tabs__el__rt">
-                                                <a href="">Оставить заявку</a>
+                                                <a href="#" class="auto-tabs__el__order">Оставить заявку</a>
                                             </div>
                                         </div>
 
@@ -578,7 +587,7 @@
                                 </div>
 
 
-                                <div class="col-4">
+                                <div class="col-md-4 col-3">
                                     <div class="auto-tabs__el">
                                         <div class="auto-tabs__el__img"> <img src="img/auto2.png" alt=""></div>
                                         <div class="auto-tabs__el__start">
@@ -606,13 +615,13 @@
                                                 </div>
                                             </div>
                                             <div class="auto-tabs__el__rt">
-                                                <a href="">Оставить заявку</a>
+                                                <a href="#" class="auto-tabs__el__order">Оставить заявку</a>
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-md-4 col-3">
                                     <div class="auto-tabs__el">
                                         <div class="auto-tabs__el__img"> <img src="img/auto2.png" alt=""></div>
                                         <div class="auto-tabs__el__start">
@@ -640,7 +649,7 @@
                                                 </div>
                                             </div>
                                             <div class="auto-tabs__el__rt">
-                                                <a href="">Оставить заявку</a>
+                                                <a href="#" class="auto-tabs__el__order">Оставить заявку</a>
                                             </div>
                                         </div>
 
@@ -650,9 +659,9 @@
                             </div>
                         </div>
                         <div class="auto-tabs__tab tabs-item">
-                            <div class="row">
+                            <div class="row flex-nowrap">
 
-                                <div class="col-4">
+                                <div class="col-md-4 col-3">
 
                                     <div class="auto-tabs__el">
                                         <div class="auto-tabs__el__img"> <img src="img/auto1.png" alt=""></div>
@@ -681,7 +690,7 @@
                                                 </div>
                                             </div>
                                             <div class="auto-tabs__el__rt">
-                                                <a href="">Оставить заявку</a>
+                                                <a href="#" class="auto-tabs__el__order">Оставить заявку</a>
                                             </div>
                                         </div>
 
@@ -689,7 +698,7 @@
                                 </div>
 
 
-                                <div class="col-4">
+                                <div class="col-md-4 col-3">
                                     <div class="auto-tabs__el">
                                         <div class="auto-tabs__el__img"> <img src="img/auto2.png" alt=""></div>
                                         <div class="auto-tabs__el__start">
@@ -717,13 +726,13 @@
                                                 </div>
                                             </div>
                                             <div class="auto-tabs__el__rt">
-                                                <a href="">Оставить заявку</a>
+                                                <a href="#" class="auto-tabs__el__order">Оставить заявку</a>
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-md-4 col-3">
                                     <div class="auto-tabs__el">
                                         <div class="auto-tabs__el__img"> <img src="img/auto2.png" alt=""></div>
                                         <div class="auto-tabs__el__start">
@@ -751,7 +760,7 @@
                                                 </div>
                                             </div>
                                             <div class="auto-tabs__el__rt">
-                                                <a href="">Оставить заявку</a>
+                                                <a href="#" class="auto-tabs__el__order">Оставить заявку</a>
                                             </div>
                                         </div>
 
@@ -761,9 +770,9 @@
                             </div>
                         </div>
                         <div class="auto-tabs__tab tabs-item">
-                            <div class="row">
+                            <div class="row flex-nowrap">
 
-                                <div class="col-4">
+                                <div class="col-md-4 col-3">
 
                                     <div class="auto-tabs__el">
                                         <div class="auto-tabs__el__img"> <img src="img/auto1.png" alt=""></div>
@@ -792,7 +801,7 @@
                                                 </div>
                                             </div>
                                             <div class="auto-tabs__el__rt">
-                                                <a href="">Оставить заявку</a>
+                                                <a href="#" class="auto-tabs__el__order">Оставить заявку</a>
                                             </div>
                                         </div>
 
@@ -800,7 +809,7 @@
                                 </div>
 
 
-                                <div class="col-4">
+                                <div class="col-md-4 col-3">
                                     <div class="auto-tabs__el">
                                         <div class="auto-tabs__el__img"> <img src="img/auto2.png" alt=""></div>
                                         <div class="auto-tabs__el__start">
@@ -828,12 +837,12 @@
                                                 </div>
                                             </div>
                                             <div class="auto-tabs__el__rt">
-                                                <a href="">Оставить заявку</a>
+                                                <a href="#" class="auto-tabs__el__order">Оставить заявку</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-md-4 col-3">
                                     <div class="auto-tabs__el">
                                         <div class="auto-tabs__el__img"> <img src="img/auto2.png" alt=""></div>
                                         <div class="auto-tabs__el__start">
@@ -861,7 +870,7 @@
                                                 </div>
                                             </div>
                                             <div class="auto-tabs__el__rt">
-                                                <a href="">Оставить заявку</a>
+                                                <a href="#" class="auto-tabs__el__order">Оставить заявку</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1108,163 +1117,175 @@
 
                     </ol>
 
+                </div>
+            </div>
+        </div>
+    </section>
 
 
+
+    <section class="reviews screen-padding gray">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
                     <div class="screen-title">Отзывы</div>
-
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-9 over-hidden">
-                            <div class="row flex-nowrap sliders">
-                                <div class="col-lg-4 col-md-6 col-sm-12 slide padding-top-bottom-20">
-                                    <div class="reviews__el">
-                                        <img src="img/rew.png" alt="" class="reviews__el__img">
-                                        <div class="reviews__el__intro">
-                                            <div class="reviews__el__head">
-                                                <span class="reviews__el__title"> Елена</span>
-                                                <span class="reviews__el__data"> 31.10.2020</span>
-                                            </div>
-                                            <div class="reviews__el__city">
-                                                г. Артём
-                                            </div>
-                                            <div class="reviews__el__txt">
-                                                Спасибо компании "Автосендер", за моего нового Витса!!! Было очень
-                                                приятно
-                                                работать с
-                                                ребятами.
-                                            </div>
-                                            <a href="" class="reviews__el__open">Открыть</a>
-                                        </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-9 over-hidden">
+                    <div class="row flex-nowrap sliders">
+                        <div class="col-lg-4 col-md-6 col-sm-12  col-12 slide padding-top-bottom-20">
+                            <div class="reviews__el">
+                                <img src="img/rew.png" alt="" class="reviews__el__img">
+                                <div class="reviews__el__intro">
+                                    <div class="reviews__el__head">
+                                        <span class="reviews__el__title"> Елена</span>
+                                        <span class="reviews__el__data"> 31.10.2020</span>
                                     </div>
-                                </div>
-
-                                <div class="col-lg-4 col-md-6 col-sm-12 slide padding-top-bottom-20">
-                                    <div class="reviews__el">
-                                        <img src="img/rew.png" alt="" class="reviews__el__img">
-                                        <div class="reviews__el__intro">
-                                            <div class="reviews__el__head">
-                                                <span class="reviews__el__title">Елена</span>
-                                                <span class="reviews__el__data"> 31.10.2020</span>
-                                            </div>
-                                            <div class="reviews__el__city">
-                                                г. Артём
-                                            </div>
-                                            <div class="reviews__el__txt">
-                                                Спасибо компании "Автосендер", за моего нового Витса!!! Было очень
-                                                приятно
-                                                работать с
-                                                ребятами.
-                                            </div>
-                                            <a href="" class="reviews__el__open">Открыть</a>
-                                        </div>
+                                    <div class="reviews__el__city">
+                                        г. Артём
                                     </div>
-                                </div>
-
-                                <div class="col-lg-4 col-md-6 col-sm-12 slide padding-top-bottom-20">
-                                    <div class="reviews__el">
-                                        <img src="img/rew.png" alt="" class="reviews__el__img">
-                                        <div class="reviews__el__intro">
-                                            <div class="reviews__el__head">
-                                                <span class="reviews__el__title"> Елена</span>
-                                                <span class="reviews__el__data"> 31.10.2020</span>
-                                            </div>
-                                            <div class="reviews__el__city">
-                                                г. Артём
-                                            </div>
-                                            <div class="reviews__el__txt">
-                                                Спасибо компании "Автосендер", за моего нового Витса!!! Было очень
-                                                приятно
-                                                работать с
-                                                ребятами.
-                                            </div>
-                                            <a href="" class="reviews__el__open">Открыть</a>
-                                        </div>
+                                    <div class="reviews__el__txt">
+                                        Спасибо компании "Автосендер", за моего нового Витса!!! Было очень приятно
+                                        работать с
+                                        ребятами.
                                     </div>
+                                    <a href="" class="reviews__el__open">Открыть</a>
                                 </div>
-
-                                <div class="col-lg-4 col-md-6 col-sm-12 slide padding-top-bottom-20">
-                                    <div class="reviews__el">
-                                        <img src="img/rew.png" alt="" class="reviews__el__img">
-                                        <div class="reviews__el__intro">
-                                            <div class="reviews__el__head">
-                                                <span class="reviews__el__title"> Елена</span>
-                                                <span class="reviews__el__data"> 31.10.2020</span>
-                                            </div>
-                                            <div class="reviews__el__city">
-                                                г. Артём
-                                            </div>
-                                            <div class="reviews__el__txt">
-                                                Спасибо компании "Автосендер", за моего нового Витса!!! Было очень
-                                                приятно
-                                                работать с
-                                                ребятами.
-                                            </div>
-                                            <a href="" class="reviews__el__open">Открыть</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-lg-4 col-md-6 col-sm-12 slide padding-top-bottom-20">
-                                    <div class="reviews__el">
-                                        <img src="img/rew.png" alt="" class="reviews__el__img">
-                                        <div class="reviews__el__intro">
-                                            <div class="reviews__el__head">
-                                                <span class="reviews__el__title"> Елена</span>
-                                                <span class="reviews__el__data"> 31.10.2020</span>
-                                            </div>
-                                            <div class="reviews__el__city">
-                                                г. Артём
-                                            </div>
-                                            <div class="reviews__el__txt">
-                                                Спасибо компании "Автосендер", за моего нового Витса!!! Было очень
-                                                приятно
-                                                работать с
-                                                ребятами.
-                                            </div>
-                                            <a href="" class="reviews__el__open">Открыть</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4 col-md-6 col-sm-12 slide padding-top-bottom-20">
-                                    <div class="reviews__el">
-                                        <img src="img/rew.png" alt="" class="reviews__el__img">
-                                        <div class="reviews__el__intro">
-                                            <div class="reviews__el__head">
-                                                <span class="reviews__el__title"> Елена</span>
-                                                <span class="reviews__el__data"> 31.10.2020</span>
-                                            </div>
-                                            <div class="reviews__el__city">
-                                                г. Артём
-                                            </div>
-                                            <div class="reviews__el__txt">
-                                                Спасибо компании "Автосендер", за моего нового Витса!!! Было очень
-                                                приятно
-                                                работать с
-                                                ребятами.
-                                            </div>
-                                            <a href="" class="reviews__el__open">Открыть</a>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
+                        </div>
 
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 slide padding-top-bottom-20">
+                            <div class="reviews__el">
+                                <img src="img/rew.png" alt="" class="reviews__el__img">
+                                <div class="reviews__el__intro">
+                                    <div class="reviews__el__head">
+                                        <span class="reviews__el__title">Елена</span>
+                                        <span class="reviews__el__data"> 31.10.2020</span>
+                                    </div>
+                                    <div class="reviews__el__city">
+                                        г. Артём
+                                    </div>
+                                    <div class="reviews__el__txt">
+                                        Спасибо компании "Автосендер", за моего нового Витса!!! Было очень приятно
+                                        работать с
+                                        ребятами.
+                                    </div>
+                                    <a href="" class="reviews__el__open">Открыть</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 slide padding-top-bottom-20">
+                            <div class="reviews__el">
+                                <img src="img/rew.png" alt="" class="reviews__el__img">
+                                <div class="reviews__el__intro">
+                                    <div class="reviews__el__head">
+                                        <span class="reviews__el__title"> Елена</span>
+                                        <span class="reviews__el__data"> 31.10.2020</span>
+                                    </div>
+                                    <div class="reviews__el__city">
+                                        г. Артём
+                                    </div>
+                                    <div class="reviews__el__txt">
+                                        Спасибо компании "Автосендер", за моего нового Витса!!! Было очень приятно
+                                        работать с
+                                        ребятами.
+                                    </div>
+                                    <a href="" class="reviews__el__open">Открыть</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 slide padding-top-bottom-20">
+                            <div class="reviews__el">
+                                <img src="img/rew.png" alt="" class="reviews__el__img">
+                                <div class="reviews__el__intro">
+                                    <div class="reviews__el__head">
+                                        <span class="reviews__el__title"> Елена</span>
+                                        <span class="reviews__el__data"> 31.10.2020</span>
+                                    </div>
+                                    <div class="reviews__el__city">
+                                        г. Артём
+                                    </div>
+                                    <div class="reviews__el__txt">
+                                        Спасибо компании "Автосендер", за моего нового Витса!!! Было очень приятно
+                                        работать с
+                                        ребятами.
+                                    </div>
+                                    <a href="" class="reviews__el__open">Открыть</a>
+                                </div>
+                            </div>
                         </div>
 
 
-                        <div class="col-md-1 padding-top-bottom-20">
-                            <a href="" class="reviews__el__more">
-                                <span>Смотреть все</span>
-                            </a>
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 slide padding-top-bottom-20">
+                            <div class="reviews__el">
+                                <img src="img/rew.png" alt="" class="reviews__el__img">
+                                <div class="reviews__el__intro">
+                                    <div class="reviews__el__head">
+                                        <span class="reviews__el__title"> Елена</span>
+                                        <span class="reviews__el__data"> 31.10.2020</span>
+                                    </div>
+                                    <div class="reviews__el__city">
+                                        г. Артём
+                                    </div>
+                                    <div class="reviews__el__txt">
+                                        Спасибо компании "Автосендер", за моего нового Витса!!! Было очень приятно
+                                        работать с
+                                        ребятами.
+                                    </div>
+                                    <a href="" class="reviews__el__open">Открыть</a>
+                                </div>
+                            </div>
                         </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 slide padding-top-bottom-20">
+                            <div class="reviews__el">
+                                <img src="img/rew.png" alt="" class="reviews__el__img">
+                                <div class="reviews__el__intro">
+                                    <div class="reviews__el__head">
+                                        <span class="reviews__el__title"> Елена</span>
+                                        <span class="reviews__el__data"> 31.10.2020</span>
+                                    </div>
+                                    <div class="reviews__el__city">
+                                        г. Артём
+                                    </div>
+                                    <div class="reviews__el__txt">
+                                        Спасибо компании "Автосендер", за моего нового Витса!!! Было очень приятно
+                                        работать с
+                                        ребятами.
+                                    </div>
+                                    <a href="" class="reviews__el__open">Открыть</a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                   
-                     <div class="slider__dott"></div>
-                     
+
+                </div>
 
 
+                <div class="col-md-1 padding-top-bottom-20">
+                    <a href="" class="reviews__el__more"></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="slider__dott"></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="screen-padding">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-12">
 
                     <div class="calculator-page__seo seo-text__txt styles-articles">
 
@@ -1399,63 +1420,69 @@
         </div>
     </section>
 
-
-
-
     <footer class="footer">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-2">
-                    <div class="footer__title">Autosender</div>
-                    <ul class="footer__list">
-                        <li><a href="#">Цены на автомобили</a></li>
-                        <li><a href="#">Автоаукцион Онлайн</a></li>
-                        <li><a href="#">Информация</a></li>
-                        <li><a href="#">О компании</a></li>
-                        <li><a href="#">Отзывы</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-6">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-12 mr-">
+                            <div class="footer__title">Autosender</div>
+                            <ul class="footer__list">
+                                <li><a href="#">Цены на автомобили</a></li>
+                                <li><a href="#">Автоаукцион Онлайн</a></li>
+                                <li><a href="#">Информация</a></li>
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">Отзывы</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-12 mr-">
+                            <div class="footer__title">Разделы</div>
+                            <ul class="footer__list">
+                                <li><a href="#">Статистика аукционов</a></li>
+                                <li><a href="#">Автоаукционы онлайн</a></li>
+                                <li><a href="#"> Доставка по России</a></li>
+                                <li><a href="#"> Калькулятор автомобиля</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-12 mr-">
+                            <div class="footer__title">Наши соц. сети</div>
+                            <ul class="footer__soc-list">
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-2">
-                    <div class="footer__title">Разделы</div>
-                    <ul class="footer__list">
-                        <li><a href="#">Статистика аукционов</a></li>
-                        <li><a href="#">Автоаукционы онлайн</a></li>
-                        <li><a href="#"> Доставка по России</a></li>
-                        <li><a href="#"> Калькулятор автомобиля</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2">
-                    <div class="footer__title">Наши соц. сети</div>
-                    <ul class="footer__soc-list">
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2">
-                    <div class="footer__title">Контакты</div>
-                    <ul class="footer__list f-contact">
-                        <li><a href="#">+7 (999) 559-85-80</a></li>
-                        <li><span>Екатеринбург, мкр. Светлый дом 2</span><a href="#">Как проехать?</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2 padding-top-43">
-                    <ul class="footer__list f-contact">
-                        <li><a href="#">+7 (999) 559-85-80</a></li>
-                        <li><span>Екатеринбург, мкр. Светлый дом 2</span><a href="#">Как проехать?</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2 padding-top-43">
-                    <ul class="footer__list f-contact">
-                        <li><a href="#">+7 (999) 559-85-80</a></li>
-                        <li><span>Екатеринбург, мкр. Светлый дом 2</span><a href="#">Как проехать?</a></li>
-                    </ul>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-6">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4  col-sm-4 col-md-4 col-12 footer-col__fr">
+                            <div class="footer__title">Контакты</div>
+                            <ul class="footer__list f-contact">
+                                <li><a href="#">+7 (999) 559-85-80</a></li>
+                                <li><span>Екатеринбург, мкр. Светлый дом 2</span><a href="#">Как проехать?</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-12 footer-col__br ">
+                            <ul class="footer__list f-contact">
+                                <li><a href="#">+7 (999) 559-85-80</a></li>
+                                <li><span>Екатеринбург, мкр. Светлый дом 2</span><a href="#">Как проехать?</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-12 footer-col__br">
+                            <ul class="footer__list f-contact">
+                                <li><a href="#">+7 (999) 559-85-80</a></li>
+                                <li><span>Екатеринбург, мкр. Светлый дом 2</span><a href="#">Как проехать?</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
+
             <div class="footer__bot">
                 <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-lg-2 col-md-4 col-4">
                         <ul class="footer__list">
                             <li><a href="#">Абакан</a></li>
                             <li><a href="#">Алапаевск</a></li>
@@ -1476,7 +1503,7 @@
                             <li><a href="#">Биробиджан</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-lg-2 col-md-4 col-4">
                         <ul class="footer__list">
                             <li><a href="#">Благовещенск</a></li>
                             <li><a href="#">Братск</a></li>
@@ -1497,7 +1524,7 @@
                             <li><a href="#">Казань</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-lg-2 col-md-4 col-4">
                         <ul class="footer__list">
                             <li><a href="#">Калуга</a></li>
                             <li><a href="#">Калуга</a></li>
@@ -1519,7 +1546,7 @@
                             <li><a href="#">Находка</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-lg-2 col-md-4 col-4">
                         <ul class="footer__list">
                             <li><a href="#">Находка</a></li>
                             <li><a href="#">Нерюнгри</a></li>
@@ -1540,7 +1567,7 @@
                             <li><a href="#">Пермь</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-lg-2 col-md-4 col-4">
                         <ul class="footer__list">
                             <li><a href="#">Петрозаводск</a></li>
                             <li><a href="#">Прокопьевск</a></li>
@@ -1561,7 +1588,7 @@
                             <li><a href="#">Тамбов</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-lg-2 col-md-4 col-4">
                         <ul class="footer__list">
                             <li><a href="#">Тверь</a></li>
                             <li><a href="#">Тольятти</a></li>
@@ -1585,6 +1612,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-md-12">
                     <div class="footer__cop">
