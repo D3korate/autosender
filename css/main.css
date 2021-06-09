@@ -359,6 +359,7 @@ img {
     background: url(../img/sumbit-1.svg) no-repeat center center;
     width: 100px;
     cursor: pointer;
+    text-indent: -9999px;
 }
 
 .screen-1__form__selects {
@@ -3266,7 +3267,7 @@ ul.articles-page__cont__list > li > ul > li:last-child {
 
 .calculator-page__banner-menu {
     padding-top: 266px;
-    background: url(../img/banner-menu.png) no-repeat 0 0;
+    background: url(../img/banner-menu.jpg) no-repeat 0 0;
     background-size: cover;
     display: flex;
 }
@@ -3765,6 +3766,7 @@ ul.articles-page__cont__list > li > ul > li:last-child {
         font-size: 16px;
         color: #fff;
         cursor: pointer;
+        text-indent: 0;
     }
 
     .screen-1__el__anchor {
