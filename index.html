@@ -57,9 +57,9 @@
         </div>
         <div class="header__mobile">
             <span class="header__mobile__menu-burg"></span>
-            <span class="header__mobile__menu-bid">Оставить заявку</span> 
+            <span class="header__mobile__menu-bid modal-call">Оставить заявку</span>
             <span class="header__mobile__menu-whats"></span>
-            <span class="header__mobile__menu-chat"></span>  
+            <span class="header__mobile__menu-chat"></span>
         </div>
     </header>
 
@@ -69,7 +69,7 @@
             <div class="screen-1__el">
                 <div class="screen-1__dec">Поможем в покупке автомобиля</div>
                 <div class="screen-1__title">Продажа автомобилей c аукционов Яп<i>о</i>нии</div>
-                <a href="#" class="screen-1__more">Узнать больше</a>
+                <a href="#" class="screen-1__more modal-call">Узнать больше</a>
                 <div class="screen-1__form-first">
                     <input type="text" class="screen-1__form-first__input" placeholder="Номер телефона">
                     <input type="submit" value="Оставить заявку" class="screen-1__form-first__submit">
@@ -1469,7 +1469,9 @@
                         <div class="col-md-1"></div>
                         <div class="col-lg-4 col-md-12">
                             <a href="#" class="screen-7__el">
-                                <div class="screen-7__img" style="background: url(img/article1.jpg) no-repeat 0 0;background-size: cover;"></div>
+                                <div class="screen-7__img"
+                                    style="background: url(img/article1.jpg) no-repeat 0 0;background-size: cover;">
+                                </div>
                                 <div class="screen-7__el__txt">
                                     <div class="screen-7__el__title">27 Японских автомобилей до 500 000 рублей</div>
                                     <div class="screen-7__el__dec"> Стоит ли выбирать между экономией и комфортом, если
@@ -1479,7 +1481,9 @@
                         </div>
                         <div class="col-lg-3 col-md-12">
                             <a href="#" class="screen-7__el">
-                                <div class="screen-7__img" style="background: url(img/article2.jpg) no-repeat 0 0;background-size: cover;"></div>
+                                <div class="screen-7__img"
+                                    style="background: url(img/article2.jpg) no-repeat 0 0;background-size: cover;">
+                                </div>
                                 <div class="screen-7__el__txt">
                                     <div class="screen-7__el__title">27 Японских автомобилей до 500 000 рублей</div>
                                     <div class="screen-7__el__dec"> Стоит ли выбирать между экономией и комфортом, если
@@ -1489,7 +1493,9 @@
                         </div>
                         <div class="col-lg-3 col-md-12">
                             <a href="#" class="screen-7__el">
-                                <div class="screen-7__img" style="background: url(img/article3.jpg) no-repeat 0 0;background-size: cover;"></div>
+                                <div class="screen-7__img"
+                                    style="background: url(img/article3.jpg) no-repeat 0 0;background-size: cover;">
+                                </div>
                                 <div class="screen-7__el__txt">
                                     <div class="screen-7__el__title">27 Японских автомобилей до 500 000 рублей</div>
                                     <div class="screen-7__el__dec"> Стоит ли выбирать между экономией и комфортом, если
@@ -1553,7 +1559,8 @@
                     <div class="col-lg-4 col-md-5 col-8">
                         <div class="screen-8__el">
                             <span>4</span>
-                            <span>Аукционный лист подробно описывает состояние автомашины, вы точно знаете, что покупаете.
+                            <span>Аукционный лист подробно описывает состояние автомашины, вы точно знаете, что
+                                покупаете.
                             </span>
                         </div>
                     </div>
@@ -1892,6 +1899,71 @@
             </div>
         </div>
     </footer>
+    <div class="modal">
+        <div class="modal__body">
+            <span class="modal__close"></span>
+
+            <div class="modal__title">Оставьте заявку </div>
+            <div class="modal__txt">
+                Наш менеджер подберет автомобиль по вашим параметрам
+                и обсудит варианты его покупки с аукциона Японии
+            </div>
+            <div class="modal__form">
+                <div class="modal__inputs">
+                    <input type="text" placeholder="Ваше имя" class="modal__input">
+                    <input type="text" placeholder="Номер телефона" class="modal__input">
+                </div>
+
+                <span class="modal__politic">
+                    <input type="checkbox" name="" id="check-0" class="checkbox">
+                    <label for="check-0"> Я согласен с <a href="#"> Политикой обработки<br>
+                            персональных данных</a></label>
+                </span>
+
+
+                <input type="submit" value="Подобрать автомобиль" class="modal__submit">
+
+            </div>
+            <div class="modal__footer">
+                <ul class="modal__contact-list">
+                    <li>
+                        <a href="#" class="modal__contact-list__whats"></a>
+                        <a href="#" class="modal__contact-list__teleg"></a>
+                    </li>
+                    <li>
+                        <span>
+                            <a href="#">8 (800) 301-77-59</a>
+                            <span>Звонок по РФ бесплатный</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <a href="#">+7 (969) 999-35-13</a>
+                            <span>Руководитель отдела продаж</span>
+                        </span>
+                    </li>
+                </ul>
+                <div class="modal__managers">
+                    <div class="modal__managers__title"> Наши менеджеры</div>
+                    <ul class="modal__managers__list">
+                        <li>
+                            <span>Инна М.</span>
+                            <span>+7 (911) 783-82-52</span>
+                        </li>
+                        <li>
+                            <span>Владимир Н.</span>
+                            <span>+7 (911) 783-82-41</span>
+                        </li>
+                        <li>
+                            <span>Александр К.</span>
+                            <span>+7 (911) 783-82-34</span>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="js/main.js"></script>
 </body>
 

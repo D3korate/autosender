@@ -1,5 +1,5 @@
 const selectSingle = document.querySelectorAll('.__select');
-
+const body = document.getElementsByTagName("body");
 
 for (let i = 0; i < selectSingle.length; i++) {
   const selectSingle_title = selectSingle[i].querySelector('.__select__title');
@@ -299,6 +299,30 @@ if (fotorama) {
   }
 }
 
+
+
+const modal = document.querySelector(".modal");
+const modalCall = document.querySelectorAll(".modal-call");
+
+
+modalCall.forEach(function(el) {
+  el.addEventListener("click", function() {
+
+  modal.classList.add("active");
+
+  body[0].classList.add("over-hidden");
+
+  let modalClose = modal.querySelector(".modal__close");
+  modalClose.addEventListener("click", function() {
+    modal.classList.remove("active")
+  });
+  modal.addEventListener("click", function (event) {
+    if (event.target == this) {
+        this.classList.remove("active")
+    }
+})
+});
+})
 
 
 
