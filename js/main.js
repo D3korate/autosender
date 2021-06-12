@@ -1,9 +1,34 @@
-const selectSingle = document.querySelectorAll('.__select');
 const body = document.getElementsByTagName("body");
+
+const selectSingle = document.querySelectorAll('.__select');
 
 for (let i = 0; i < selectSingle.length; i++) {
   const selectSingle_title = selectSingle[i].querySelector('.__select__title');
   const selectSingle_labels = selectSingle[i].querySelectorAll('.__select__label');
+  const selectSingle_txt = selectSingle[i].querySelector('.__select__txt');
+
+  if (selectSingle_txt) {
+    selectSingle_txt.addEventListener("keyup", () => {
+
+      let filter = selectSingle_txt.value.toLowerCase();
+      console.log(filter);
+
+
+      selectSingle_labels.forEach(el => {
+        console.log(el.innerHTML.toLowerCase());
+        if (el.innerHTML.toLowerCase().indexOf(filter) > -1) {
+          el.style.display = "";
+        }
+        else {
+          el.style.display = "none";
+        }
+
+
+
+      })
+    })
+  }
+
 
   selectSingle_title.addEventListener('click', () => {
     if ('active' === selectSingle[i].getAttribute('data-state')) {
@@ -116,62 +141,127 @@ for (let y = 0; y < tabs.length; y++) {
 
 
 function slider() {
-  const slides = document.querySelector(".sliders");
-  if (!slides) return false;
 
-  const slide = document.querySelectorAll(".slide");
-  let slideDotts = document.querySelector(".slider__dott");
-
-  let leftPosition = 0;
+  const slide_elements = document.querySelectorAll(".sliders");
 
 
-  let slideNumbOnPage = slides.clientWidth / slide[0].clientWidth;
-  slideNumbOnPage = Math.round(slideNumbOnPage);
+  if (!slide_elements) return false;
 
-  let NumbPage = slide.length / slideNumbOnPage;
+  slide_elements.forEach(slides => {
+
+    const slide = slides.querySelectorAll(".slide");
+   
+
+    let slideDotts = document.createElement("span");
+
+    slideDotts.classList.add("slider__dott");
+    slides.after(slideDotts);
+
+    let slidersLeft = document.createElement("span");
+    let slidersRight = document.createElement("span");
+
+    let leftPosition = 0;
+
+    let slideNumbOnPage = slides.clientWidth / slide[0].clientWidth;
+    console.log(slide[0].clientWidth);
+    slideNumbOnPage = Math.round(slideNumbOnPage);
+
+    let NumbPage = slide.length / slideNumbOnPage;
 
 
-  for (let x = 0; x < NumbPage; x++) {
+    for (let x = 0; x < NumbPage; x++) {
+      let xx = document.createElement('span');
 
-
-    let xx = document.createElement('span');
-    if (x == 0) {
-      xx.classList.add("active");
-    }
-    slideDotts.appendChild(xx);
-
-
-
-    xx.addEventListener("click", function () {
-
-      //  console.log("ширина слайдера: " + slides.clientWidth + ";" + "ширина элемента" + i.clientWidth)
-
-      let dott = slideDotts.querySelectorAll("span");
-      for (let i = 0; i < dott.length; i++) {
-        if (dott[i].classList.contains("active")) dott[i].classList.remove("active")
+      if (NumbPage > 1) {
+        if (x == 0) xx.classList.add("active");
+        slideDotts.appendChild(xx);
+    
       }
 
-      leftPosition = slides.clientWidth * x;
 
-      // left = (i.clientWidth * (x + 1)) - slides.clientWidth;
-      // console.log(left);
 
-      // if (leftPosition < 0) leftPosition = 0;
-      // if (leftPosition > slides.clientWidth) leftPosition = 0;
+
+      xx.addEventListener("click", function () {
+
+        //  console.log("ширина слайдера: " + slides.clientWidth + ";" + "ширина элемента" + i.clientWidth)
+
+        let dott = slides.parentNode.querySelectorAll(".slider__dott span");
+ 
+        for (let i = 0; i < dott.length; i++) {
+          if (dott[i].classList.contains("active")) dott[i].classList.remove("active")
+        }
+
+        leftPosition = slides.clientWidth * x;
+
+        slides.style.left = -leftPosition + "px";
+        xx.classList.add("active");
+
+
+
+      })
+    }
+
+    slidersLeft.addEventListener("click", function () {
+
+      if (leftPosition <= 0) {
+        leftPosition = 0;
+      }
+      else {
+        leftPosition -= slide[0].clientWidth;
+      }
 
       slides.style.left = -leftPosition + "px";
-      xx.classList.add("active");
+
+
+      let dott = slides.parentNode.querySelectorAll(".slider__dott span");
+      console.log(dott);
+      let dottActive = leftPosition / slides.clientWidth;
+      dottActive = Math.ceil(dottActive);
+      for (let i = 0; i < dott.length; i++) {
+        if (dott[i].classList.contains("active")) dott[i].classList.remove("active");
+      }
+      dott[dottActive].classList.add("active")
+
+    })
+
+    slidersRight.addEventListener("click", function () {
+
+
+      if (leftPosition < slide[0].clientWidth * (slide.length - slideNumbOnPage)) {
+        leftPosition += slide[0].clientWidth;
+      }
+      else {
+        leftPosition = 0;
+      }
+
+
+      slides.style.left = -leftPosition + "px";
+
+      let dott = slides.parentNode.querySelectorAll(".slider__dott span");
+
+      let dottActive = leftPosition / slides.clientWidth;
+      dottActive = Math.ceil(dottActive);
+
+      for (let i = 0; i < dott.length; i++) {
+        if (dott[i].classList.contains("active")) dott[i].classList.remove("active");
+      }
+      dott[dottActive].classList.add("active")
 
 
 
     })
 
+    touch(slides, slidersRight, slidersLeft);
 
-  }
+
+  })
+
+
 }
 
 
 function sliderStep() {
+
   let mainSlider = document.querySelectorAll(".main-slider");
   if (!mainSlider) return false;
 
@@ -186,27 +276,31 @@ function sliderStep() {
     sliderStepNumbOnPage = Math.round(sliderStepNumbOnPage);
     let slideWidth = sliderStepItem[0].clientWidth;
 
-    sliderRight.addEventListener("click", function () {
+    sliderRight.addEventListener("click", funSliderRight)
 
+    sliderLeft.addEventListener("click", funSliderLeft)
+
+
+    function funSliderRight() {
       offeset += slideWidth;
       if (offeset > slideWidth * (sliderStepItem.length - sliderStepNumbOnPage)) offeset = 0;
       sliderStep.style.left = - offeset + "px";
+    }
 
-    })
-
-    sliderLeft.addEventListener("click", function () {
-
+    function funSliderLeft() {
       offeset -= slideWidth;
       if (offeset < 0) offeset = 0;
       sliderStep.style.left = - offeset + "px";
+    }
 
-    })
+    touch(sliderStep, sliderRight, sliderLeft);
 
   });
 
-
-
 }
+
+
+
 
 
 
@@ -305,25 +399,25 @@ const modal = document.querySelector(".modal");
 const modalCall = document.querySelectorAll(".modal-call");
 
 
-modalCall.forEach((el)=> {
-  el.addEventListener("click", function() {
+modalCall.forEach((el) => {
+  el.addEventListener("click", function () {
 
-  modal.classList.add("active");
+    modal.classList.add("active");
 
-  body[0].classList.add("over-hidden");
+    body[0].classList.add("over-hidden");
 
-  let modalClose = modal.querySelector(".modal__close");
-  modalClose.addEventListener("click", function() {
-    modal.classList.remove("active");
-    body[0].classList.remove("over-hidden");
-  });
-  modal.addEventListener("click", function (event) {
-    if (event.target == this) {
+    let modalClose = modal.querySelector(".modal__close");
+    modalClose.addEventListener("click", function () {
+      modal.classList.remove("active");
+      body[0].classList.remove("over-hidden");
+    });
+    modal.addEventListener("click", function (event) {
+      if (event.target == this) {
         this.classList.remove("active");
         body[0].classList.remove("over-hidden");
-    }
-})
-});
+      }
+    })
+  });
 })
 
 
@@ -332,13 +426,13 @@ modalCall.forEach((el)=> {
 const menuBurgerPopOver = document.querySelector(".menu-burger-pop-over");
 const headerMobileMenuBurg = document.querySelector(".header__mobile__menu-burg");
 
-headerMobileMenuBurg.addEventListener("click", function() {
+headerMobileMenuBurg.addEventListener("click", function () {
   menuBurgerPopOver.classList.add("active");
   body[0].classList.add("over-hidden");
   this.classList.add("active");
   let modalClose = menuBurgerPopOver.querySelector(".menu-burger__close");
 
-  modalClose.addEventListener("click", function() {
+  modalClose.addEventListener("click", function () {
     menuBurgerPopOver.classList.remove("active");
     body[0].classList.remove("over-hidden");
   });
@@ -347,7 +441,92 @@ headerMobileMenuBurg.addEventListener("click", function() {
 
 
 
-console.log(navigator);
+
+
+
+function touch(a, c, b) {
+
+  //Чувствительность — количество пикселей, после которого жест будет считаться свайпом
+  const sensitivity = 20;
+
+
+  var touchStart = null; //Точка начала касания
+  var touchPosition = null; //Текущая позиция
+
+  //Перехватываем события
+  a.addEventListener("touchstart", function (e) { TouchStart(e); }); //Начало касания
+  a.addEventListener("touchmove", function (e) { TouchMove(e); }); //Движение пальцем по экрану
+  //Пользователь отпустил экран
+  a.addEventListener("touchend", function (e) { TouchEnd(e, "green"); });
+  //Отмена касания
+  a.addEventListener("touchcancel", function (e) { TouchEnd(e, "red"); });
+
+  function TouchStart(e) {
+    //Получаем текущую позицию касания
+    touchStart = { x: e.changedTouches[0].clientX, y: e.changedTouches[0].clientY };
+    touchPosition = { x: touchStart.x, y: touchStart.y };
+
+  }
+
+  function TouchMove(e) {
+    //Получаем новую позицию
+    touchPosition = { x: e.changedTouches[0].clientX, y: e.changedTouches[0].clientY };
+
+  }
+
+  function TouchEnd(e, color) {
+
+
+    CheckAction(); //Определяем, какой жест совершил пользователь
+
+    //Очищаем позиции
+    touchStart = null;
+    touchPosition = null;
+  }
+
+  function CheckAction() {
+    var d = //Получаем расстояния от начальной до конечной точек по обеим осям
+    {
+      x: touchStart.x - touchPosition.x,
+      y: touchStart.y - touchPosition.y
+    };
+
+
+    if (Math.abs(d.x) > Math.abs(d.y)) //Проверяем, движение по какой оси было длиннее
+    {
+      if (Math.abs(d.x) > sensitivity) //Проверяем, было ли движение достаточно длинным
+      {
+        if (d.x > 0) //Если значение больше нуля, значит пользователь двигал пальцем справа налево
+        {
+
+          c.click();
+        }
+        else //Иначе он двигал им слева направо
+        {
+          b.click();
+
+        }
+      }
+    }
+    else //Аналогичные проверки для вертикальной оси
+    {
+      if (Math.abs(d.y) > sensitivity) {
+        if (d.y > 0) //Свайп вверх
+        {
+
+        }
+        else //Свайп вниз
+        {
+
+        }
+      }
+    }
+
+  }
+}
+
+
+
 slider();
 sliderStep();
 
