@@ -150,7 +150,7 @@ function slider() {
   slide_elements.forEach(slides => {
 
     const slide = slides.querySelectorAll(".slide");
-   
+
 
     let slideDotts = document.createElement("span");
 
@@ -175,7 +175,7 @@ function slider() {
       if (NumbPage > 1) {
         if (x == 0) xx.classList.add("active");
         slideDotts.appendChild(xx);
-    
+
       }
 
 
@@ -186,7 +186,7 @@ function slider() {
         //  console.log("ширина слайдера: " + slides.clientWidth + ";" + "ширина элемента" + i.clientWidth)
 
         let dott = slides.parentNode.querySelectorAll(".slider__dott span");
- 
+
         for (let i = 0; i < dott.length; i++) {
           if (dott[i].classList.contains("active")) dott[i].classList.remove("active")
         }
@@ -440,7 +440,38 @@ headerMobileMenuBurg.addEventListener("click", function () {
 })
 
 
+const fSpoller = document.querySelectorAll(".f-spoller");
+const mainFillterSett = document.querySelector(".main__fillter__sett");
 
+
+if (mainFillterSett) {
+  mainFillterSett.addEventListener("click", () => {
+
+    fSpoller.forEach(el => {
+      el.classList.toggle("hiden");
+    });
+    mainFillterSett.classList.toggle("active")
+
+  });
+
+  mainFillterSett.click();
+}
+
+
+
+const mainFillterLabelMob = document.querySelector(".main__fillter__label-mob");
+const mainFillterBody = document.querySelector(".main__fillter-body");
+
+if (mainFillterLabelMob) {
+  mainFillterLabelMob.addEventListener("click", () => {
+    mainFillterBody.classList.toggle("active")
+  })
+
+
+  document.querySelector(".main__fillter-bd__head__close").addEventListener("click", (e) => {
+    mainFillterBody.classList.remove("active")
+  })
+}
 
 
 

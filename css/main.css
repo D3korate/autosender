@@ -124,6 +124,39 @@ img {
     background: url(../img/whatsapp.svg) no-repeat 0 0;
 }
 
+.header__soc-mob {
+    display: none;
+    align-items: center;
+}
+
+.header__soc-mob > li {
+    margin-right: 20px;
+}
+
+.header__soc-mob > li:last-child {
+    margin-right: 0;
+}
+
+.header__soc-mob > li > a {
+    width: 26px;
+    height: 26px;
+    display: block;
+}
+
+.header__soc-mob > li:nth-child(1) > a {
+    background: url(../img/teleg-mob.svg) no-repeat 0 0;
+}
+
+.header__soc-mob > li:nth-child(2) > a {
+    background: url(../img/whats-mob.svg) no-repeat 0 0;
+}
+
+.header__soc-mob > li:nth-child(3) > a {
+    background: url(../img/phone-mob.svg) no-repeat 0 0;
+    width: 36px;
+    height: 36px;
+}
+
 .header__phone > span {
     display: block;
     font-size: 10px;
@@ -443,7 +476,7 @@ img {
     width: 100%;
     height: 100%;
     background: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
     font-size: 15px;
     cursor: pointer;
 
@@ -1946,7 +1979,91 @@ img {
     padding-right: 20px;
     color: #bc002d;
     cursor: pointer;
+    position: relative;
+}
+
+.main__fillter__sett:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
     background: url(../img/arrow3.svg) no-repeat right center;
+    height: 16px;
+    width: 16px;
+}
+
+.active.main__fillter__sett:after {
+    transform: rotate(-180deg);
+}
+
+.main__fillter__label-mob {
+    width: 100%;
+    max-width: 234px;
+    display: block;
+    background: #bc002d url(../img/main__fillter__label-mob.svg) no-repeat 42px center;
+    line-height: 56px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    padding-left: 82px;
+    letter-spacing: 0.045em;
+    height: 56px;
+    cursor: pointer;
+}
+
+.main__fillter__head-mob {
+    display: none;
+    padding: 20px;
+}
+
+.main__fillter__tags-mob {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.main__fillter__tags-mob > li {
+    margin-right: 10px;
+}
+
+.main__fillter__tags-mob > li > a {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.045em;
+    line-height: 35px;
+    display: block;
+    border: 1px solid #5a9cff;
+    border-radius: 18px;
+    color: #5a9cff;
+    padding-left: 32px;
+    padding-right: 16px;
+    background: url(../img/tag-delet.svg) no-repeat 16px center;
+}
+
+.main__fillter-bd__head {
+    display: none;
+    height: 77px;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f8f8;
+    padding: 0 20px;
+}
+
+.main__fillter-bd__head__tit {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 0.045em;
+    color: #150202;
+}
+
+.main__fillter-bd__head__close {
+    height: 20px;
+    width: 20px;
+    background: url(../img/close-2.svg) no-repeat;
 }
 
 .main__fillter__reset {
@@ -3941,6 +4058,10 @@ a.modal__contact-list__teleg {
     background: url(../img/whatsapp.svg) no-repeat 0 0;
 }
 
+.hiden {
+    display: none;
+}
+
 @media (max-width: 1200px) {
     .header__col.menu {
         display: none;
@@ -4225,7 +4346,12 @@ a.modal__contact-list__teleg {
     }
     .header__soc {
         margin-right: 0;
+        display: none;
     }
+    .header__soc-mob {
+        display: flex;
+    }
+    
     .header__row {
         height: 72px;
     }
@@ -4528,6 +4654,35 @@ a.modal__contact-list__teleg {
         padding: 15px 20px;
         border-bottom: none;
     }
+
+    .main__fillter-bd__head {
+        display: flex;
+    }
+
+    .main__fillter__head-mob {
+        display: block;
+    }
+
+    .main__fillter-body {
+        display: none;
+    }
+
+    .active.main__fillter-body {
+        display: block;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        background: #fff;
+        overflow: auto;
+    }
+
+    .main__fillter-bd {
+        padding-bottom: 60px;
+    }
+
     .header__mobile {
         height: 67px;
     }

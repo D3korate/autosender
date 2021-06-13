@@ -59,7 +59,7 @@
         </div>
         <div class="header__mobile">
             <span class="header__mobile__menu-burg"></span>
-            <span class="header__mobile__menu-bid">Оставить заявку</span>
+            <span class="header__mobile__menu-bid modal-call">Оставить заявку</span>
             <span class="header__mobile__menu-whats"></span>
             <span class="header__mobile__menu-chat"></span>
         </div>
@@ -77,13 +77,13 @@
 
                     <div class="row">
                         <div class="col-lg-7 col-md-12 col-12">
-                            <div class="fotorama" data-nav="thumbs" data-thumbheight="120" data-thumbwidth="250">
-                                <img src="img/rew-1.png" alt="">
-                                <img src="img/rew-1.png" alt="">
-                                <img src="img/rew-1.png" alt="">
-                                <img src="img/rew-1.png" alt="">
-                                <img src="img/rew-1.png" alt="">
-                                <img src="img/rew-1.png" alt="">
+                            <div class="fotorama">
+                                <img src="img/rew-1.jpg" alt="">
+                                <img src="img/rew-1.jpg" alt="">
+                                <img src="img/rew-1.jpg" alt="">
+                                <img src="img/rew-1.jpg" alt="">
+                                <img src="img/rew-1.jpg" alt="">
+                                <img src="img/rew-1.jpg" alt="">
                             </div>
                         </div>
                         <div class="col-md-1"></div>
@@ -268,7 +268,7 @@
                     </div>
                     <div class="request__inputs">
                         <input type="text" class="request__input" placeholder="Ваше имя">
-                        <input type="text" class="request__input" placeholder="Номер телефона">
+                        <input type="text" class="request__input mask" placeholder="Номер телефона">
                     </div>
 
                     <label class="request__label">
@@ -485,6 +485,200 @@
             </div>
         </div>
     </footer>
+    <div class="modal">
+        <div class="modal__body">
+            <span class="modal__close"></span>
+
+            <div class="modal__title">Оставьте заявку </div>
+            <div class="modal__txt">
+                Наш менеджер подберет автомобиль по вашим параметрам
+                и обсудит варианты его покупки с аукциона Японии
+            </div>
+            <div class="modal__form">
+                <div class="modal__inputs">
+                    <input type="text" placeholder="Ваше имя" class="modal__input">
+                    <input type="text" placeholder="Номер телефона" class="modal__input mask">
+                </div>
+
+                <span class="modal__politic">
+                    <input type="checkbox" name="" id="check-0" class="checkbox">
+                    <label for="check-0"> Я согласен с <a href="#"> Политикой обработки<br>
+                            персональных данных</a></label>
+                </span>
+
+
+                <input type="submit" value="Подобрать автомобиль" class="modal__submit">
+
+            </div>
+            <div class="modal__footer">
+                <ul class="modal__contact-list">
+                    <li>
+                        <a href="#" class="modal__contact-list__whats"></a>
+                        <a href="#" class="modal__contact-list__teleg"></a>
+                    </li>
+                    <li>
+                        <span>
+                            <a href="#">8 (800) 301-77-59</a>
+                            <span>Звонок по РФ бесплатный</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <a href="#">+7 (969) 999-35-13</a>
+                            <span>Руководитель отдела продаж</span>
+                        </span>
+                    </li>
+                </ul>
+                <div class="modal__managers">
+                    <div class="modal__managers__title"> Наши менеджеры</div>
+                    <ul class="modal__managers__list">
+                        <li>
+                            <span>Инна М.</span>
+                            <span>+7 (911) 783-82-52</span>
+                        </li>
+                        <li>
+                            <span>Владимир Н.</span>
+                            <span>+7 (911) 783-82-41</span>
+                        </li>
+                        <li>
+                            <span>Александр К.</span>
+                            <span>+7 (911) 783-82-34</span>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu-burger-pop-over">
+        <div class="menu-burger-pop">
+            <div class="menu-burger__header">
+                <img src="img/logo.svg" alt="">
+                <span class="menu-burger__close"></span>
+            </div>
+            <div class="menu-burger__body">
+                <div class="menu-burger__body__tabs">
+                    <ul class="menu-burger__tabs-list">
+                        <li class="active">
+                            <div><span>Цены на автомобили</span>
+                                <span>Цены на основе статистики продаж</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div><span>Автоаукцион Онлайн</span>
+                                <span>Автомобили готовые к покупке</span>
+                            </div>
+                        </li>
+                    </ul>
+                     <div class="menu-burger__tabs-item">
+                        <div class="menu-burger__tabs-item-scroll">
+                            <ul class="menu-burger__tabs-item__list">
+                                <li><a href="#">Toyota</a>
+                                    <ul>
+                                        <li><a href="#">Toyota Prius</a></li>
+                                        <li><a href="#">Toyota Aqua</a></li>
+                                        <li><a href="#">Toyota Harrier</a></li>
+                                        <li><a href="#">Toyota Allion</a></li>
+                                        <li><a href="#">Toyota Sai</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Nissan</a>
+                                    <ul>
+                                        <li><a href="#">Nissan Leaf</a></li>
+                                        <li><a href="#">Nissan X-Trail</a></li>
+                                        <li><a href="#">Nissan Elgrand</a></li>
+                                        <li><a href="#">Nissan Juke</a></li>
+                                        <li><a href="#">Nissan Qashqai</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Honda</a>
+                                    <ul>
+                                        <li><a href="#">Honda Civic</a></li>
+                                        <li><a href="#">Honda N-WGN</a></li>
+                                        <li><a href="#">Honda Vezel</a></li>
+                                        <li><a href="#">Honda Pilot</a></li>
+                                        <li><a href="#">Honda Freed</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Mitsubishi</a>
+                                    <ul>
+                                        <li><a href="#">Mitsubishi Lancer</a></li>
+                                        <li><a href="#">Mitsubishi Delica D:5</a></li>
+                                        <li><a href="#">Mitsubishi Grandis</a></li>
+                                        <li><a href="#">Mitsubishi Outlander</a></li>
+                                        <li><a href="#">Mitsubishi Galant</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#" class="menu-burger__tabs-item__more">Смотреть все модели</a>
+
+                    </div>
+                </div>
+                <div class="menu-burger__body__allmenu">
+                    <div class="burger__body__allmenu__col">
+
+                        <div class="burger__body__allmenu__title">
+                            <span>Разделы</span>
+                            <span>Полезные информация для наших клиентов</span>
+                        </div>
+
+                        <ul class="burger__body__allmenu__list">
+                            <li>
+                                <a href="">О компании</a>
+                            </li>
+                            <li>
+                                <a href="">Отзывы</a>
+                            </li>
+                            <li>
+                                <a href="">Контакты</a>
+                            </li>
+                            <li>
+                                <a href="">Статистика аукционов</a>
+                            </li>
+                            <li>
+                                <a href="">Доставка по России</a>
+                            </li>
+                            <li>
+                                <a href="">Калькулятор автомобиля</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="burger__body__allmenu__col">
+                        <div class="burger__body__allmenu__title">
+                            <span>Информация</span>
+                            <span>Полезные материалы</span>
+                        </div>
+                        <ul class="burger__body__allmenu__list">
+                            <li>
+                                <a href="">Что нужно знать перед покупкой</a>
+                            </li>
+                            <li>
+                                <a href="">Интересное о японских автомобилях</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="menu-burger__footer">
+                <div class="menu-burger__footer__phone">
+                    <a href="#">8 (800) 301-77-59</a>
+                    <span>Горячая линия, звонок<br>
+                        по РФ бесплатный</span>
+                </div>
+                <ul class="menu-burger__footer__soc">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+
+
+            </div>
+
+        </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="libs/fotorama.js"></script>
     <script src="js/main.js"></script>
