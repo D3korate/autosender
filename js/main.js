@@ -198,6 +198,14 @@ function slider() {
   slide_elements.forEach(slides => {
 
     const slide = slides.querySelectorAll(".slide");
+    let slideImg = slides.querySelectorAll(".reviews__el__img");
+
+    slideImg.forEach(function(el) {
+
+      el.ondragstart = function() {
+        return false;
+      };
+    });
 
 
     let slideDotts = document.createElement("span");
