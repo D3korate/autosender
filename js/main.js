@@ -48,69 +48,63 @@ for (let i = 0; i < selectSingle.length; i++) {
 }
 
 
-// const scrollDrop = document.querySelectorAll('.scroll-drop');
+const scrollDrop = document.querySelectorAll('.scroll-drop');
 
-// scrollDrop.forEach(function (el, i) {
+scrollDrop.forEach(function (el, i) {
 
+  let movpageX = 0;
+  let startpageX = 0;
+  let storagepageX = 0;
+  let scroll = 0;
 
-//   el.addEventListener('mousedown', (e) => {
-   
-//     el.onmousemove = function(e) {
-//       Drop(e);
-//   }
+  el.ondragstart = function() {
+    return false;
+  };
+  el.addEventListener('mousedown', (e) => {
+    startpageX = e.pageX;
+    el.onmousemove = function (e) {       
+      movpageX = startpageX - e.pageX;
+      scroll = storagepageX + movpageX;    
+      this.scrollLeft = scroll;
+       console.log("movpageX " + movpageX);
+       console.log("scroll " + scroll);
+    }
+    el.onmouseup = function (e) {
+      let x = el.scrollWidth - el.clientWidth;
+      storagepageX += movpageX;
+      if (storagepageX < 0) storagepageX = 0;
+      if (storagepageX > x)  storagepageX = x;
+      this.onmousemove = null;
+    }
+  });
 
-//   el.onmouseup = function() {
-//     // Убираем отслеживание позиции мыши
-//     el.onmousemove = null;
-//    // Убираем отслеживание нажатия мыши
-//    el.onmouseup = null;
-// }
-
-//   });
-
-//   function Drop(e) {
-
-
-//     const t = e.currentTarget;
-//     const xx = Math.min(1, e.clientX / t.clientWidth);
-//     el.scrollLeft = (t.scrollWidth - t.clientWidth) * xx;
-//   }
-
-// });
+});
 
 
 function moving(el, lt, rt) {
   el.addEventListener('mousedown', (e) => {
 
-  let startpageX = e.pageX;
-  let storing = 20;
-   
-  el.onmouseup = function(e) {
-    
-    let dropsize = startpageX - e.pageX;
-    if (dropsize > 0 && dropsize > storing) {
-      lt.click();
- 
+    let startpageX = e.pageX;
+    let storing = 20;
+
+    el.onmouseup = function (e) {
+      let dropsize = startpageX - e.pageX;
+      if (dropsize > 0 && dropsize > storing) lt.click();
+      if (dropsize < 0 && dropsize < -storing) rt.click();
     }
-    if (dropsize < 0 && dropsize < -storing) {
-      rt.click();
-    }
-    
-    
+
+
+    // document.onmouseup = function() {
+    //   // Убираем отслеживание позиции мыши
+    //   document.onmousemove = null;
+    //  // Убираем отслеживание нажатия мыши
+    //  document.onmouseup = null;
+    // }
+
+  });
+
 }
 
-
-// document.onmouseup = function() {
-//   // Убираем отслеживание позиции мыши
-//   document.onmousemove = null;
-//  // Убираем отслеживание нажатия мыши
-//  document.onmouseup = null;
-// }
-
-});
-
-}
- 
 
 
 
@@ -200,9 +194,9 @@ function slider() {
     const slide = slides.querySelectorAll(".slide");
     let slideImg = slides.querySelectorAll(".reviews__el__img");
 
-    slideImg.forEach(function(el) {
+    slideImg.forEach(function (el) {
 
-      el.ondragstart = function() {
+      el.ondragstart = function () {
         return false;
       };
     });
@@ -219,7 +213,7 @@ function slider() {
     let leftPosition = 0;
 
     let slideNumbOnPage = slides.clientWidth / slide[0].clientWidth;
- 
+
     slideNumbOnPage = Math.round(slideNumbOnPage);
 
     let NumbPage = slide.length / slideNumbOnPage;
@@ -239,7 +233,7 @@ function slider() {
 
       xx.addEventListener("click", function () {
 
-   
+
         let dott = slides.parentNode.querySelectorAll(".slider__dott span");
 
         for (let i = 0; i < dott.length; i++) {
@@ -326,7 +320,7 @@ function sliderStep() {
     let sliderStep = i.querySelector(".sliderStep");
     let sliderStepItem = i.querySelectorAll(".sliderStep__item");
     let sliderStepItemImg = i.querySelectorAll(".team__item__img > img");
-   
+
     let sliderLeft = i.querySelector(".slider-left");
     let sliderRight = i.querySelector(".slider-right");
     let offeset = 0;
@@ -339,8 +333,8 @@ function sliderStep() {
     sliderLeft.addEventListener("click", funSliderLeft)
 
 
-    sliderStepItemImg.forEach((el)=> {
-      el.ondragstart = function() {
+    sliderStepItemImg.forEach((el) => {
+      el.ondragstart = function () {
         return false;
       };
     })

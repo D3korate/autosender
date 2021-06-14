@@ -1195,6 +1195,8 @@ img {
     display: flex;
     align-items: center;
     position: relative;
+    user-select: none;
+    cursor: move;
 }
 
 .screen-4__el__line {
@@ -1464,6 +1466,8 @@ img {
     display: flex;
     align-items: center;
     position: relative;
+    user-select: none;
+    cursor: move;
 }
 
 .screen-8__el > span:nth-child(1) {
