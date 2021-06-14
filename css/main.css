@@ -1278,7 +1278,7 @@ img {
 .reviews__el {
     height: 100%;
     background: #fff;
-
+    user-select: none;
     box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -2491,6 +2491,10 @@ a.contact__page__teleg {
 
 .team {
     background: linear-gradient(180deg, #f4f4f4 0%, #ffffff 29.69%, #ffffff 71.87%, #f4f4f4 100%);
+}
+
+.team__item {
+    user-select: none;
 }
 
 .team__item__title {
@@ -4061,6 +4065,8 @@ a.modal__contact-list__teleg {
 .hiden {
     display: none;
 }
+
+
 
 @media (max-width: 1200px) {
     .header__col.menu {

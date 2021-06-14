@@ -11,11 +11,11 @@ for (let i = 0; i < selectSingle.length; i++) {
     selectSingle_txt.addEventListener("keyup", () => {
 
       let filter = selectSingle_txt.value.toLowerCase();
-      console.log(filter);
+
 
 
       selectSingle_labels.forEach(el => {
-        console.log(el.innerHTML.toLowerCase());
+
         if (el.innerHTML.toLowerCase().indexOf(filter) > -1) {
           el.style.display = "";
         }
@@ -48,21 +48,69 @@ for (let i = 0; i < selectSingle.length; i++) {
 }
 
 
-const scrollDrop = document.querySelectorAll('.scroll-drop');
+// const scrollDrop = document.querySelectorAll('.scroll-drop');
 
-scrollDrop.forEach(function (el, i) {
-
-
-  el.addEventListener('mousemove', (e) => {
-    const t = e.currentTarget;
-    const xx = Math.min(1, e.clientX / t.clientWidth);
-    el.scrollLeft = (t.scrollWidth - t.clientWidth) * xx;
-
-  });
+// scrollDrop.forEach(function (el, i) {
 
 
+//   el.addEventListener('mousedown', (e) => {
+   
+//     el.onmousemove = function(e) {
+//       Drop(e);
+//   }
+
+//   el.onmouseup = function() {
+//     // Убираем отслеживание позиции мыши
+//     el.onmousemove = null;
+//    // Убираем отслеживание нажатия мыши
+//    el.onmouseup = null;
+// }
+
+//   });
+
+//   function Drop(e) {
+
+
+//     const t = e.currentTarget;
+//     const xx = Math.min(1, e.clientX / t.clientWidth);
+//     el.scrollLeft = (t.scrollWidth - t.clientWidth) * xx;
+//   }
+
+// });
+
+
+function moving(el, lt, rt) {
+  el.addEventListener('mousedown', (e) => {
+
+  let startpageX = e.pageX;
+  let storing = 20;
+   
+  el.onmouseup = function(e) {
+    
+    let dropsize = startpageX - e.pageX;
+    if (dropsize > 0 && dropsize > storing) {
+      lt.click();
+ 
+    }
+    if (dropsize < 0 && dropsize < -storing) {
+      rt.click();
+    }
+    
+    
+}
+
+
+// document.onmouseup = function() {
+//   // Убираем отслеживание позиции мыши
+//   document.onmousemove = null;
+//  // Убираем отслеживание нажатия мыши
+//  document.onmouseup = null;
+// }
 
 });
+
+}
+ 
 
 
 
@@ -163,7 +211,7 @@ function slider() {
     let leftPosition = 0;
 
     let slideNumbOnPage = slides.clientWidth / slide[0].clientWidth;
-    console.log(slide[0].clientWidth);
+ 
     slideNumbOnPage = Math.round(slideNumbOnPage);
 
     let NumbPage = slide.length / slideNumbOnPage;
@@ -183,8 +231,7 @@ function slider() {
 
       xx.addEventListener("click", function () {
 
-        //  console.log("ширина слайдера: " + slides.clientWidth + ";" + "ширина элемента" + i.clientWidth)
-
+   
         let dott = slides.parentNode.querySelectorAll(".slider__dott span");
 
         for (let i = 0; i < dott.length; i++) {
@@ -214,7 +261,7 @@ function slider() {
 
 
       let dott = slides.parentNode.querySelectorAll(".slider__dott span");
-      console.log(dott);
+
       let dottActive = leftPosition / slides.clientWidth;
       dottActive = Math.ceil(dottActive);
       for (let i = 0; i < dott.length; i++) {
@@ -252,6 +299,7 @@ function slider() {
     })
 
     touch(slides, slidersRight, slidersLeft);
+    moving(slides, slidersRight, slidersLeft);
 
 
   })
@@ -269,6 +317,8 @@ function sliderStep() {
 
     let sliderStep = i.querySelector(".sliderStep");
     let sliderStepItem = i.querySelectorAll(".sliderStep__item");
+    let sliderStepItemImg = i.querySelectorAll(".team__item__img > img");
+   
     let sliderLeft = i.querySelector(".slider-left");
     let sliderRight = i.querySelector(".slider-right");
     let offeset = 0;
@@ -280,6 +330,12 @@ function sliderStep() {
 
     sliderLeft.addEventListener("click", funSliderLeft)
 
+
+    sliderStepItemImg.forEach((el)=> {
+      el.ondragstart = function() {
+        return false;
+      };
+    })
 
     function funSliderRight() {
       offeset += slideWidth;
@@ -294,6 +350,7 @@ function sliderStep() {
     }
 
     touch(sliderStep, sliderRight, sliderLeft);
+    moving(sliderStep, sliderRight, sliderLeft);
 
   });
 
